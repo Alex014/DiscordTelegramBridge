@@ -4,6 +4,7 @@ from telegram.ext import Updater
 
 import re
 import json
+import os
 from pprint import pprint
 
 # Discord -> telegram Bridge BOT by Chosen One
@@ -21,7 +22,8 @@ class MyClient(discord.Client):
 
     def __load_settings(self):
         try:
-            f = open('config.json', 'r')
+            cdir = os.path.dirname(__file__)
+            f = open(cdir + '/config.json', 'r')
         except IOError:
             print('No config.json file, you must create it, see readme.md !')
             f.close()
