@@ -22,8 +22,7 @@ class MyClient(discord.Client):
 
     def __load_settings(self):
         try:
-            cdir = os.path.dirname(__file__)
-            f = open(cdir + '/config.json', 'r')
+            f = open(os.getcwd() + '/config.json', 'r')
         except IOError:
             print('No config.json file, you must create it, see readme.md !')
             f.close()
