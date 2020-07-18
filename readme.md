@@ -1,7 +1,7 @@
 ### Discord -> Telegram Bridge
 
 This is bridge bot, which transmits discord messages to telegram from multiple channels with all atachements
-
+ * run `pip install discord` and  `pip install python-telegram-bot`
  * Create the `config.json` file in the same dir
 
 ```
